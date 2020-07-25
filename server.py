@@ -27,7 +27,8 @@ def handle_client(conn, addr):
                 conn.send("Msg received".encode('utf-8'))
         except socket.error:
             print("[EXITING]You're exiting the server!!!!")
-            conn.close()
+            break
+        conn.close()
         
 
 def start():
